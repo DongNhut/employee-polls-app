@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+a {
+  text-decoration: none;
+}
+:global .ant-card-head {
+  background-color: antiquewhite !important;
+}

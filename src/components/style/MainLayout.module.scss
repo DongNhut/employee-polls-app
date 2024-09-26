@@ -1,0 +1,62 @@
+/* MainLayout.module.scss */
+.container_layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+:global .ant-menu {
+  height: 100% !important;
+}
+:global a {
+  text-decoration: none;
+}
+.leftMenu {
+  width: 276px; /* Set the width of the left menu */
+  background-color: #f0f0f0; /* Add your desired background color for the left menu */
+}
+
+.contentPage {
+  flex: 1; /* Allow the content page to take up the remaining space */
+  padding: 16px 24px; /* Add padding to the content area as needed */
+}
+
+.custom_card {
+  width: 150px;
+  text-align: center;
+
+  :global .ant-card-head {
+    background-color: #87e8de;
+  }
+}
+//question style
+.input_question {
+  height: 40px;
+  width: 600px;
+}
+.form_question {
+  max-width: 600px;
+  margin: auto;
+}
+.button_question {
+  height: 40px;
+}
+// style for leader
+.form_leader {
+  border-radius: 5px;
+  border: 1px solid #4be4c2;
+  margin-bottom: 15px;
+}
+.form_leader_1 {
+  margin: auto auto;
+}
+.title_leader {
+  justify-content: center;
+}
+.col_leader {
+  margin: auto auto;
+  padding: 20px;
+}
+.card_style {
+  width: 150px;
+  text-align: center;
+}
