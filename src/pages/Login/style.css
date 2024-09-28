@@ -1,0 +1,39 @@
+.container {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.img-logo {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.grid-container-element {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-card {
+  width: 30%;
+  height: 24rem;
+  margin: auto;
+  box-shadow: rgb(0 0 0 / 68%) 0px 1px 4px;
+  border-radius: 8px;
+  padding: 3rem;
+}
+
+.login-card Button {
+  width: 100%;
+  background: #4d72b6;
+  border: 1px solid #4d72b6;
+  transition: 0.5s;
+}
+
+.login-card Button:hover {
+  width: 100%;
+  background: #4d72b6b0;
+  border: 1px solid #4d72b6;
+}

@@ -1,0 +1,20 @@
+.questions p {
+  margin: 0 !important;
+}
+
+.questions Button,
+.poll-buttons Button.btn:disabled {
+  background: #4d72b6;
+  border: 1px solid #4d72b6;
+  transition: 0.5s;
+}
+
+.questions Button:hover {
+  background: #4d72b6db;
+  border: 1px solid #4d72b6;
+}
+
+.poll-container .poll-buttons {
+  display: grid;
+  gap: 1rem;
+}

@@ -1,0 +1,16 @@
+.new-poll {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.new-poll Button {
+  background: #4d72b6;
+  border: 1px solid #4d72b6;
+  transition: 0.5s;
+  width: 100%;
+}
+
+.new-poll Button:hover {
+  background: #85197b;
+  border: 1px solid #4d72b6;
+}

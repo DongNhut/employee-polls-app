@@ -1,0 +1,48 @@
+.dashboard h4 {
+  padding: 5px 15px;
+  border: 1px solid #4d72b6;
+  border-radius: 5px;
+  font-size: 20px;
+  background: #4d72b6;
+  color: #fff;
+}
+
+.dashboard ul {
+  display: grid;
+  grid-template-columns: repeat(5, 3fr);
+  gap: 2rem;
+  margin-top: 20px;
+}
+
+.questions .button {
+  display: flex;
+  gap: 10px;
+}
+
+.questions .active {
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: rgb(0 0 0 / 15%) 0px 2px 8px;
+  color: #fff;
+}
+
+.questions .unactive {
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: rgb(0 0 0 / 15%) 0px 2px 8px;
+  color: #fff;
+  background: #ccc;
+  border: 1px solid #ccc;
+}
+
+.questions .none {
+  display: none;
+}
+
+.questions .block {
+  display: grid;
+}
+
+.dashboard ul li {
+  list-style: none;
+}
