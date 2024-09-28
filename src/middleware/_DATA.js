@@ -1,136 +1,132 @@
 let users = {
-  maisamaximo: {
-    id: "maisamaximo",
-    password: "12345",
-    name: "Maisa Maximo",
-    avatarURL:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjoqVmDYZ24XDeOIjwvaawlp1LL4HHPXpSIQ&s",
+  sarahedo: {
+    id: 'sarahedo',
+    password:'password123',
+    name: 'Sarah Edo',
+    avatarURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjoqVmDYZ24XDeOIjwvaawlp1LL4HHPXpSIQ&s",
     answers: {
-      "8xf0y6ziyjabvozdd253nd": "optionOne",
-      "6ni6ok3ym7mf1p33lnez": "optionOne",
-      am8ehyc8byjqgar0jgpub9: "optionTwo",
-      loxhs1bqm25b708cmbf3g: "optionTwo",
+      "8xf0y6ziyjabvozdd253nd": 'optionOne',
+      "6ni6ok3ym7mf1p33lnez": 'optionOne',
+      "am8ehyc8byjqgar0jgpub9": 'optionTwo',
+      "loxhs1bqm25b708cmbf3g": 'optionTwo'
     },
-    questions: ["8xf0y6ziyjabvozdd253nd", "am8ehyc8byjqgar0jgpub9"],
+    questions: ['8xf0y6ziyjabvozdd253nd', 'am8ehyc8byjqgar0jgpub9']
   },
-  jsdaniell: {
-    id: "jsdaniell",
-    password: "password123",
-    name: "José Daniel",
-    avatarURL:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2Y4_lh6ze0cj9OxQ-CYi4Mk7JDNYDJaAseA&s",
+  tylermcginnis: {
+    id: 'tylermcginnis',
+    password:'abc321',
+    name: 'Tyler McGinnis',
+    avatarURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2Y4_lh6ze0cj9OxQ-CYi4Mk7JDNYDJaAseA&s",
     answers: {
-      vthrdm985a262al8qx3do: "optionOne",
-      xj352vofupe1dqz9emx13r: "optionTwo",
+      "vthrdm985a262al8qx3do": 'optionOne',
+      "xj352vofupe1dqz9emx13r": 'optionTwo',
     },
-    questions: ["loxhs1bqm25b708cmbf3g", "vthrdm985a262al8qx3do"],
+    questions: ['loxhs1bqm25b708cmbf3g', 'vthrdm985a262al8qx3do'],
   },
-  diego3g: {
-    id: "diego3g",
-    password: "password123",
-    name: "Diego Fernandes",
-    avatarURL:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdXPF0HAQdqILH6PwvjKI2RHvwm9G6xnjP7Q&s",
+  mtsamis: {
+    id: 'mtsamis',
+    password:'xyz123',
+    name: 'Mike Tsamis',
+    avatarURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdXPF0HAQdqILH6PwvjKI2RHvwm9G6xnjP7Q&s",
     answers: {
-      xj352vofupe1dqz9emx13r: "optionOne",
-      vthrdm985a262al8qx3do: "optionTwo",
-      "6ni6ok3ym7mf1p33lnez": "optionOne",
+      "xj352vofupe1dqz9emx13r": 'optionOne',
+      "vthrdm985a262al8qx3do": 'optionTwo',
+      "6ni6ok3ym7mf1p33lnez": 'optionOne'
     },
-    questions: ["6ni6ok3ym7mf1p33lnez", "xj352vofupe1dqz9emx13r"],
+    questions: ['6ni6ok3ym7mf1p33lnez', 'xj352vofupe1dqz9emx13r'],
   },
-  kubowania: {
-    id: "kubowania",
-    password: "password123",
-    name: "Ania Kubow",
-    avatarURL:
-      "https://img.freepik.com/premium-psd/bear-face-shot-isolated-transparent-background_879541-324.jpg",
+  zoshikanlu: {
+    id: 'zoshikanlu',
+    password:'pass246',
+    name: 'Zenobia Oshikanlu',
+    avatarURL: "https://img.freepik.com/premium-psd/bear-face-shot-isolated-transparent-background_879541-324.jpg",
     answers: {
-      xj352vofupe1dqz9emx13r: "optionOne",
+      "xj352vofupe1dqz9emx13r": 'optionOne',
     },
     questions: [],
-  },
-};
+  }
+}
 
 let questions = {
   "8xf0y6ziyjabvozdd253nd": {
-    id: "8xf0y6ziyjabvozdd253nd",
-    author: "maisamaximo",
+    id: '8xf0y6ziyjabvozdd253nd',
+    author: 'sarahedo',
     timestamp: 1467166872634,
     optionOne: {
-      votes: ["maisamaximo"],
-      text: "Build our new application with Javascript",
+      votes: ['sarahedo'],
+      text: 'Build our new application with Javascript',
     },
     optionTwo: {
       votes: [],
-      text: "Build our new application with Typescript",
-    },
+      text: 'Build our new application with Typescript'
+    }
   },
   "6ni6ok3ym7mf1p33lnez": {
-    id: "6ni6ok3ym7mf1p33lnez",
-    author: "diego3g",
+    id: '6ni6ok3ym7mf1p33lnez',
+    author: 'mtsamis',
     timestamp: 1468479767190,
     optionOne: {
       votes: [],
-      text: "Hire more frontend developers",
+      text: 'hire more frontend developers',
     },
     optionTwo: {
-      votes: ["diego3g", "maisamaximo"],
-      text: "Hire more backend developers",
-    },
+      votes: ['mtsamis', 'sarahedo'],
+      text: 'hire more backend developers'
+    }
   },
-  am8ehyc8byjqgar0jgpub9: {
-    id: "am8ehyc8byjqgar0jgpub9",
-    author: "maisamaximo",
+  "am8ehyc8byjqgar0jgpub9": {
+    id: 'am8ehyc8byjqgar0jgpub9',
+    author: 'sarahedo',
     timestamp: 1488579767190,
     optionOne: {
       votes: [],
-      text: "Conduct a release retrospective 1 week after a release",
+      text: 'conduct a release retrospective 1 week after a release',
     },
     optionTwo: {
-      votes: ["maisamaximo"],
-      text: "Conduct release retrospectives quarterly",
-    },
+      votes: ['sarahedo'],
+      text: 'conduct release retrospectives quarterly'
+    }
   },
-  loxhs1bqm25b708cmbf3g: {
-    id: "loxhs1bqm25b708cmbf3g",
-    author: "jsdaniell",
+  "loxhs1bqm25b708cmbf3g": {
+    id: 'loxhs1bqm25b708cmbf3g',
+    author: 'tylermcginnis',
     timestamp: 1482579767190,
     optionOne: {
       votes: [],
-      text: "Have code reviews conducted by peers",
+      text: 'have code reviews conducted by peers',
     },
     optionTwo: {
-      votes: ["maisamaximo"],
-      text: "Have code reviews conducted by managers",
-    },
+      votes: ['sarahedo'],
+      text: 'have code reviews conducted by managers'
+    }
   },
-  vthrdm985a262al8qx3do: {
-    id: "vthrdm985a262al8qx3do",
-    author: "jsdaniell",
+  "vthrdm985a262al8qx3do": {
+    id: 'vthrdm985a262al8qx3do',
+    author: 'tylermcginnis',
     timestamp: 1489579767190,
     optionOne: {
-      votes: ["jsdaniell"],
-      text: "Take a course on ReactJS",
+      votes: ['tylermcginnis'],
+      text: 'take a course on ReactJS',
     },
     optionTwo: {
-      votes: ["diego3g"],
-      text: "Take a course on unit testing with Jest",
-    },
+      votes: ['mtsamis'],
+      text: 'take a course on unit testing with Jest'
+    }
   },
-  xj352vofupe1dqz9emx13r: {
-    id: "xj352vofupe1dqz9emx13r",
-    author: "diego3g",
+  "xj352vofupe1dqz9emx13r": {
+    id: 'xj352vofupe1dqz9emx13r',
+    author: 'mtsamis',
     timestamp: 1493579767190,
     optionOne: {
-      votes: ["diego3g", "kubowania"],
-      text: "Deploy to production once every two weeks",
+      votes: ['mtsamis', 'zoshikanlu'],
+      text: 'deploy to production once every two weeks',
     },
     optionTwo: {
-      votes: ["jsdaniell"],
-      text: "Deploy to production once every month",
-    },
+      votes: ['tylermcginnis'],
+      text: 'deploy to production once every month'
+    }
   },
-};
+}
 
 function generateUID() {
   return (
