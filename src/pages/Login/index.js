@@ -1,12 +1,61 @@
-import { connect } from "react-redux";
+import { connect, useSelector } from "react-redux";
 import { Navigate } from "react-router-dom";
 import { useState } from "react";
 import { handleLogin } from "../../actions/authedUser";
-
+import users from '../../middleware/_DATA';
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
 import "./style.css";
+
+const dummyUsers = [
+  {
+    id: 'sarahedo',
+    password:'password123',
+    name: 'Sarah Edo',
+    avatarURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjoqVmDYZ24XDeOIjwvaawlp1LL4HHPXpSIQ&s",
+    answers: {
+      "8xf0y6ziyjabvozdd253nd": 'optionOne',
+      "6ni6ok3ym7mf1p33lnez": 'optionOne',
+      "am8ehyc8byjqgar0jgpub9": 'optionTwo',
+      "loxhs1bqm25b708cmbf3g": 'optionTwo'
+    },
+    questions: ['8xf0y6ziyjabvozdd253nd', 'am8ehyc8byjqgar0jgpub9']
+  },
+  {
+    id: 'tylermcginnis',
+    password:'abc321',
+    name: 'Tyler McGinnis',
+    avatarURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2Y4_lh6ze0cj9OxQ-CYi4Mk7JDNYDJaAseA&s",
+    answers: {
+      "vthrdm985a262al8qx3do": 'optionOne',
+      "xj352vofupe1dqz9emx13r": 'optionTwo',
+    },
+    questions: ['loxhs1bqm25b708cmbf3g', 'vthrdm985a262al8qx3do'],
+  },
+  {
+    id: 'mtsamis',
+    password:'xyz123',
+    name: 'Mike Tsamis',
+    avatarURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdXPF0HAQdqILH6PwvjKI2RHvwm9G6xnjP7Q&s",
+    answers: {
+      "xj352vofupe1dqz9emx13r": 'optionOne',
+      "vthrdm985a262al8qx3do": 'optionTwo',
+      "6ni6ok3ym7mf1p33lnez": 'optionOne'
+    },
+    questions: ['6ni6ok3ym7mf1p33lnez', 'xj352vofupe1dqz9emx13r'],
+  },
+  {
+    id: 'zoshikanlu',
+    password:'pass246',
+    name: 'Zenobia Oshikanlu',
+    avatarURL: "https://img.freepik.com/premium-psd/bear-face-shot-isolated-transparent-background_879541-324.jpg",
+    answers: {
+      "xj352vofupe1dqz9emx13r": 'optionOne',
+    },
+    questions: [],
+  }
+]
 
 const Login = ({ dispatch, loggedIn }) => {
   const [username, setUsername] = useState("");
@@ -33,6 +82,10 @@ const Login = ({ dispatch, loggedIn }) => {
     dispatch(handleLogin(username, password));
     setUsername("");
     setPassword("");
+  };
+
+  const handleLoginWithAcc = (username, password) => {
+    dispatch(handleLogin(username, password));
   };
 
   return (
@@ -72,6 +125,23 @@ const Login = ({ dispatch, loggedIn }) => {
               Login
             </Button>
           </form>
+            <h1 className="d-flex justify-content-center mb-8">OR</h1>
+            <div className="d-flex flex-column">
+
+              {dummyUsers.map((user) => {
+              return (
+                <Button
+                  key={user.id}
+                  style={{ marginBottom: "10px", borderRadius: "5px", height: 40 }}
+                  onClick={() => {
+                    handleLoginWithAcc(user.id, user.password)
+                  }}
+                >
+                  {user.name}
+                </Button>
+              );
+                })}
+            </div>
         </div>
       </div>
     </>
