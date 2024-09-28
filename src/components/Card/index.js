@@ -7,6 +7,8 @@ import Button from "react-bootstrap/Button";
 import "./style.css";
 
 const Card = ({ question, author }) => {
+  console.log("questionquestion", question);
+  console.log("authorauthor", author);
   return (
     <div className="dashboard-card">
       <Link to={"questions/" + question.id}>
