@@ -1,8 +1,7 @@
-import { connect, useSelector } from "react-redux";
+import { connect } from "react-redux";
 import { Navigate } from "react-router-dom";
 import { useState } from "react";
 import { handleLogin } from "../../actions/authedUser";
-import users from '../../middleware/_DATA';
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
