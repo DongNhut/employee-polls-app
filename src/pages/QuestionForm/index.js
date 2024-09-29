@@ -3,9 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { handleAddQuestion } from "../../actions/questions";
 
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-
 import "./style.css";
 
 const QuestionForm = ({ dispatch }) => {

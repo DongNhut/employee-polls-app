@@ -159,7 +159,7 @@ function formatQuestion ({ optionOneText, optionTwoText, author }) {
   return {
     id: generateUID(),
     timestamp: Date.now(),
-    author,
+    author: author,
     optionOne: {
       votes: [],
       text: optionOneText,
@@ -216,8 +216,8 @@ export function _saveQuestionAnswer({ authedUser, qid, answer }) {
         [qid]: {
           ...questions[qid],
           [answer]: {
-            ...questions[qid][answer],
-            votes: questions[qid][answer].votes.concat([authedUser]),
+            ...questions[qid]?.[answer],
+            votes: questions[qid]?.[answer].votes.concat([authedUser]),
           },
         },
       };
@@ -225,4 +225,12 @@ export function _saveQuestionAnswer({ authedUser, qid, answer }) {
       resolve(true);
     }, 500);
   });
+}
+
+export function resetData() {
+  users = { ...users }
+
+  questions = {
+    ...questions
+  };
 }
