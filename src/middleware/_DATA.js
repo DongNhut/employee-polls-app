@@ -1,9 +1,17 @@
-let users = {
+export let users = {
+  erdemkeren: {
+    id: 'erdemkeren',
+    password:'pwd2022',
+    name: 'Erdem Keren',
+    avatarURL: 'https://www.w3schools.com/w3images/avatar2.png',
+    answers: {},
+    questions: []
+  },
   sarahedo: {
     id: 'sarahedo',
     password:'password123',
     name: 'Sarah Edo',
-    avatarURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjoqVmDYZ24XDeOIjwvaawlp1LL4HHPXpSIQ&s",
+    avatarURL: 'https://www.w3schools.com/howto/img_avatar2.png',
     answers: {
       "8xf0y6ziyjabvozdd253nd": 'optionOne',
       "6ni6ok3ym7mf1p33lnez": 'optionOne',
@@ -16,7 +24,7 @@ let users = {
     id: 'tylermcginnis',
     password:'abc321',
     name: 'Tyler McGinnis',
-    avatarURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2Y4_lh6ze0cj9OxQ-CYi4Mk7JDNYDJaAseA&s",
+    avatarURL: 'https://www.w3schools.com/w3images/avatar2.png',
     answers: {
       "vthrdm985a262al8qx3do": 'optionOne',
       "xj352vofupe1dqz9emx13r": 'optionTwo',
@@ -27,7 +35,7 @@ let users = {
     id: 'mtsamis',
     password:'xyz123',
     name: 'Mike Tsamis',
-    avatarURL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdXPF0HAQdqILH6PwvjKI2RHvwm9G6xnjP7Q&s",
+    avatarURL: 'https://www.w3schools.com/howto/img_avatar.png',
     answers: {
       "xj352vofupe1dqz9emx13r": 'optionOne',
       "vthrdm985a262al8qx3do": 'optionTwo',
@@ -39,7 +47,7 @@ let users = {
     id: 'zoshikanlu',
     password:'pass246',
     name: 'Zenobia Oshikanlu',
-    avatarURL: "https://img.freepik.com/premium-psd/bear-face-shot-isolated-transparent-background_879541-324.jpg",
+    avatarURL: null,
     answers: {
       "xj352vofupe1dqz9emx13r": 'optionOne',
     },
@@ -47,7 +55,7 @@ let users = {
   }
 }
 
-let questions = {
+export let questions = {
   "8xf0y6ziyjabvozdd253nd": {
     id: '8xf0y6ziyjabvozdd253nd',
     author: 'sarahedo',
@@ -147,11 +155,11 @@ export function _getQuestions() {
   });
 }
 
-function formatQuestion({ optionOneText, optionTwoText, author }) {
+function formatQuestion ({ optionOneText, optionTwoText, author }) {
   return {
     id: generateUID(),
     timestamp: Date.now(),
-    author: author.id,
+    author,
     optionOne: {
       votes: [],
       text: optionOneText,
@@ -159,8 +167,8 @@ function formatQuestion({ optionOneText, optionTwoText, author }) {
     optionTwo: {
       votes: [],
       text: optionTwoText,
-    },
-  };
+    }
+  }
 }
 
 export function _saveQuestion(question) {

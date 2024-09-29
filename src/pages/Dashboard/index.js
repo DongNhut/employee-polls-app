@@ -7,7 +7,6 @@ import { useState } from "react";
 const Dashboard = ({ authedUser, questions, users }) => {
   const [active, setActive] = useState(0);
 
-  console.log("usersusers", users);
   const unanswered = (question) =>
     !question.optionOne.votes.includes(authedUser.id) &&
     !question.optionTwo.votes.includes(authedUser.id);

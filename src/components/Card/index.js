@@ -7,8 +7,6 @@ import Button from "react-bootstrap/Button";
 import "./style.css";
 
 const Card = ({ question, author }) => {
-  console.log("questionquestion", question);
-  console.log("authorauthor", author);
   return (
     <div className="dashboard-card">
       <Link to={"questions/" + question.id}>
@@ -22,8 +20,8 @@ const Card = ({ question, author }) => {
             />
           </div>
           <div className="p-3">
-            <span className="py-3">{author.name}</span>
-            <div className="username pb-2">@{question.author}</div>
+          <div className="text-xl font-medium text-black">@{question.author}</div>
+                <p className="text-xs italic">{new Date(question.timestamp).toDateString()}</p>
             <Button variant="outline-success" className="card-button">
               See more
             </Button>
